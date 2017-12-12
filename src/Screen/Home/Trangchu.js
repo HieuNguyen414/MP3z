@@ -6,7 +6,6 @@ import HomeIndex from './HomeIndex';
 import SwiperFlatList from 'react-native-swiper-flatlist';
 const { width, height } = Dimensions.get('window');
 import styles from './styles';
-import Sidebar from '../Sidebar/Sidebar';
 
 export default class Trangchu extends Component {
   constructor(props){
@@ -51,11 +50,20 @@ export default class Trangchu extends Component {
             <View style = {styles.imagecoffee}>
                 {/* ảnh1 */}
               <TouchableOpacity>
-                <View>
+                  {/* background image cafe1 */}
+                <View style = {{position: 'relative'}}>
                   <Image  
                     source = {require('../../img/coffee1.png')} 
                     style ={styles.imgcoffee1}>
                   </Image>
+                </View>
+                  {/* thumbail img cafe */}
+                <View>
+                  <Image 
+                    style = {{width: 70, height: 70, position:'absolute', borderColor:'transparent', borderRadius:5, left:10, bottom: 10}}
+                    source = {require('../../img/cafe-logo-1.png')}/>
+                  <Text style = {{color:'white',marginLeft: 80,position:'absolute', bottom: 10, left:10}}>Cà Phê Cùng Bạn Bè</Text>
+                  <Image style = {{position:'absolute', bottom: 10, right:10}} source = {require('../../img/play-button.png')}/>
                 </View>
               </TouchableOpacity>
               
@@ -92,7 +100,7 @@ export default class Trangchu extends Component {
               </View>
 
               {/* 3 ca sĩ */}
-              <View style = {{width, height:80, flexDirection:'row'}}>
+              <View style = {{width, height:80, flexDirection:'row', marginTop: 20}}>
                 <View style = {styles.threecasi}>
                   <Image source = {require('../../img/baoanh.jpeg')}
                      style = {{width:60, height:60}}/>
@@ -109,14 +117,19 @@ export default class Trangchu extends Component {
                   <Text>JusstaTee</Text>
                 </View>
               </View>
-
+              
               {/* thống kê ngày */}
-              <TouchableOpacity >
-                <View style = {{flexDirection:'row', padding: 10}}>
-                  <Image source = {require('../../img/4block.png')}/> 
-                  <Text style = {{marginLeft: 10}}>26.11.2017 - 14:00</Text>
-                </View>
-              </TouchableOpacity>
+              <View>
+                <TouchableOpacity >
+                  <View style = {{flexDirection:'row', padding: 10}}>
+                    <Image source = {require('../../img/4block.png')}/> 
+                    <Text style = {{marginLeft: 10}}>26.11.2017 - 14:00</Text>
+                  </View>
+                </TouchableOpacity>
+              </View>
+              <View>
+
+              </View>
             </View>
 
         </Content>
