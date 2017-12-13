@@ -6,11 +6,6 @@ const styles = ({
   container: {
     backgroundColor: 'white',
   },
-  child: {
-    height: height/4,
-    width,
-    justifyContent: 'center',
-  },
   text: {
     fontSize: 50,
     textAlign: 'center',
@@ -89,7 +84,8 @@ const styles = ({
     marginLeft:7.5, 
     marginRight:7.5,
     flexDirection:'row',
-    marginBottom:5
+    marginBottom:5,
+    marginTop:5
    },
    view_3Casi:{
     marginLeft:7.5,
@@ -122,10 +118,7 @@ const styles = ({
    img_Back_Jusstatee:{
     width, 
     height:100,
-    borderColor:'grey',
-    borderWidth:0.1,
-    borderRadius:5,
-    marginRight:7.5
+    
    },
    view_Sing_JT:{
     position:'relative'
@@ -141,6 +134,81 @@ const styles = ({
    txt_justa:{
      color:'white',
      fontSize:13,
+     marginLeft:10
+   },
+   imgSwiper:{
+     height:150,
+     width, padding:5
+   },
+   text1Justa:{
+     fontSize:16
+   },
+   thongkengay:{
+     marginTop:8,
+     marginLeft:7.5,
+     marginRight:7.5,
+     backgroundColor:'#f4f5f7', 
+     padding:5, 
+     marginBottom:8,
+   },
+   touch_Jusstatee:{
+    marginLeft:7.5, 
+    marginRight:7.5
+   },
+   view_BackgroundJusta:{
+    position:'relative', 
+    marginTop:10
+   },
+   view_thumbJT:{
+    position:'absolute', 
+    flexDirection:'row', 
+    bottom:10, 
+    left:10
+   },
+   ngaythangthongke:{
+    marginLeft: 10, 
+    fontSize:18, 
+    fontWeight:'bold'
+   },
+   
+   // LIST MUSIC
+   view_Listnhac:{
+    flexDirection:'row', 
+    backgroundColor:'#fff', 
+    marginRight:7.5, 
+    marginLeft:7.5, 
+    position:'relative', 
+    padding:5,
+    marginBottom:6, marginTop:10
+   },
+   text_Number:{
+    marginLeft:8,
+    color:'green',
+    padding:5, marginRight:8
+   },
+   img_dotListnhac:{
+     position:'absolute',
+     right:8,
+   },
+   img_iconListnhac:{
+     position:'absolute',
+     right:55
+   },
+   imgCasi_Listnhac:{
+    height:35, 
+    width:35,
+    marginRight:10
+   },
+   //ZING CHAT TUẦN
+   Zingchat:{
+     marginLeft:7.5,
+     marginRight:7.5,
+     padding:10, 
+     marginTop:10
+   },
+   text_Zingchat:{
+    marginTop:10
    }
+
 });
   export default styles;

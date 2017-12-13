@@ -19,25 +19,36 @@ export default class Trangchu extends Component {
       <Container style={styles.container}>
         <Content>
             {/* swiper */}
-          <View style = {{height:height/4}} >
-            <SwiperFlatList
-              autoplay
+          <View>
+            <SwiperFlatList 
+              autoplay = {true}
               autoplayDelay={0.2}
               autoplayLoop
               index={1}
-              showPagination
+              showPagination = {true}
+              paginationActiveColor = {'green'}
+              paginationDefaultColor = {'grey'}
+              autoplayLoop = {true}
               >
-              <View style={[styles.child, { backgroundColor: 'tomato' }]}>
-                <Text style={styles.text}>1</Text>
+              <View>
+                <Image 
+                  style = {styles.imgSwiper}
+                  source = {require('../../img/swiper-1.jpg')}/>
               </View>
-              <View style={[styles.child, { backgroundColor: 'thistle' }]}>
-                <Text style={styles.text}>2</Text>
+              <View >
+                <Image 
+                  style = {styles.imgSwiper}
+                  source = {require('../../img/swiper-5.jpg')}/>
               </View>
-              <View style={[styles.child, { backgroundColor: 'skyblue' }]}>
-                <Text style={styles.text}>3</Text>
+              <View>
+                <Image 
+                  style = {styles.imgSwiper}
+                  source = {require('../../img/swiper-3.jpg')}/>
               </View>
-              <View style={[styles.child, { backgroundColor: 'teal' }]}>
-                <Text style={styles.text}>4</Text>
+              <View >
+                <Image 
+                  style = {styles.imgSwiper}
+                  source = {require('../../img/swiper-4.jpg')}/>
               </View>
             </SwiperFlatList>
           </View>
@@ -52,14 +63,12 @@ export default class Trangchu extends Component {
           <View style = {styles.imagecoffee}>
               {/* ảnh1 */}
             <TouchableOpacity>
-                {/* background image cafe1 */}
               <View style = {{position: 'relative'}}>
                 <Image  
                   source = {require('../../img/coffee1.png')} 
                   style ={styles.imgcoffee1}>
                 </Image>
               </View>
-                {/* thumbail img cafe */}
               <View>
                 <Image 
                   style = {styles.thumbnail_cf}
@@ -77,7 +86,6 @@ export default class Trangchu extends Component {
                   style ={styles.imgcoffee2}>
                 </Image>
               </View>
-                    {/* thumbail img cafe */}
               <View>
                 <Image 
                   style = {styles.thumbnail_cf}
@@ -87,7 +95,7 @@ export default class Trangchu extends Component {
               </View>
             </TouchableOpacity>
 
-                {/* ảnh3 */}
+              {/* ảnh3 */}
             <TouchableOpacity>
               <View>
                 <Image
@@ -126,55 +134,162 @@ export default class Trangchu extends Component {
               </TouchableOpacity>
             </View>
           </View>
-          <View style = {{height:height/4, width, backgroundColor:'black',marginRight: 7.5,marginLeft:7.5}}></View>
+          <View style = {{height:height/4,backgroundColor:'black',marginRight: 7.5,marginLeft:7.5, marginTop:10}}></View>
           
             {/* 3 ca sĩ */}
           <View >
             <View style = {styles.view_3Casi}>
+            
               <View style = {styles.view_3Casi_all}>
-                <Image source = {require('../../img/baoanh.jpeg')}
-                  style = {styles.imgCaSi}/>
+                <TouchableOpacity>
+                  <Image source = {require('../../img/baoanh.jpeg')}
+                    style = {styles.imgCaSi}/>
+                </TouchableOpacity>
                 <Text style = {styles.text_TenCaSi}>Bảo Anh</Text>
               </View>
+              
               <View  style = {styles.view_3Casi_all}>
-                <Image source = {require('../../img/phuocthinh.jpg')} 
-                  style = {styles.imgCaSi}/>
+                <TouchableOpacity>
+                  <Image source = {require('../../img/phuocthinh.jpg')} 
+                    style = {styles.imgCaSi}/>
+                </TouchableOpacity>
                 <Text style = {styles.text_TenCaSi}>Noo Phước Thịnh</Text>
               </View>
+
               <View style = {styles.view_3Casi_all}>
-                <Image source = {require('../../img/jusstatee.jpg')}
-                  style = {styles.imgCaSi}/>
+                <TouchableOpacity style = {{alignItems:'center', justifyContent:'center'}}>
+                  <Image source = {require('../../img/jusstatee.jpg')}
+                    style = {styles.imgCaSi}/>
+                </TouchableOpacity>
                 <Text style = {styles.text_TenCaSi}>JusstaTee</Text>
               </View>
             </View> 
           </View>
 
-          {/* sing of JusstaTee */}
-          <TouchableOpacity >
-            <View style = {{position:'relative'}}>
+            {/* sing of JusstaTee */}
+          <TouchableOpacity style = {styles.touch_Jusstatee}>
+            <View style = {styles.view_BackgroundJusta}>
               <Image
                 source = {require('../../img/back-jusstatee.jpg')}
                 style = {styles.img_Back_Jusstatee}
               />
             </View>
-            <View style = {{position:'absolute', flexDirection:'row'}}>
+            
+            <View style = {styles.view_thumbJT}>
               <Image 
                 style = {styles.thumbnail_jussta}
                 source = {require('../../img/jussta-thumb.jpg')}/>
                 <View style = {{marginLeft:7}}>
-                  <Text style  = {styles.txt_justa} >Đã lỡ yêu em nhiều</Text>
+                  <Text style  = {[styles.txt_justa, styles.text1Justa]} >Đã lỡ yêu em nhiều</Text>
                   <Text style  = {styles.txt_justa}>JusstaTee</Text>
                   <Text style  = {styles.txt_justa}>Chạm đỉnh Zing: 0 lần</Text>
                 </View>
             </View>
           </TouchableOpacity>
 
-           {/* thống kê ngày */}
-           <View>
-              <TouchableOpacity >
-                  <Text style = {{marginLeft: 10}}>26.11.2017 - 14:00</Text>
-              </TouchableOpacity>
+            {/* thống kê ngày */}
+          <View>
+            <TouchableOpacity style = {styles.thongkengay}>
+              <Text style = {styles.ngaythangthongke}>26.11.2017 - 14:00</Text>
+            </TouchableOpacity>
+          </View>
+
+           {/* list nhạc */}
+          <View>
+
+              {/* 1st Music - BaoAnh */}
+            <View style = {styles.view_Listnhac}>
+              <Text style = {styles.text_Number}>01</Text>
+              <Image style = {styles.imgCasi_Listnhac} 
+                source = {require('../../img/baoanh.jpeg')}/>
+                <View>
+                  <Text>Sống Xa Anh Chẳng D...</Text>
+                  <Text>Bảo Anh</Text>
+                </View>
+              <Image 
+                style = {styles.img_iconListnhac}
+                source = {require('../../img/music-player.png')}/>
+              <Image 
+                style = {styles.img_dotListnhac}
+                source = {require('../../img/more.png')}/>
             </View>
+              {/* 2nd Music - PhuocThinh */}
+            <View style = {styles.view_Listnhac}>
+              <Text style = {{marginLeft:8,color:'red',padding:5, marginRight:8}}>02</Text>
+              <Image style = {styles.imgCasi_Listnhac} 
+                source = {require('../../img/phuocthinh.jpg')}/>
+                <View>
+                  <Text>Chạm Khẽ Tim Anh M...</Text>
+                  <Text>Noo Phước thịnh</Text>
+                </View>
+              <Image 
+                style = {styles.img_iconListnhac}
+                source = {require('../../img/music-player.png')}/>
+              <Image 
+                style = {styles.img_dotListnhac}
+                source = {require('../../img/more.png')}/>
+            </View>
+
+              {/* 3th Music - Jusstatee */}
+            <View style = {styles.view_Listnhac}>
+              <Text style = {{marginLeft:8,color:'yellow',padding:5, marginRight:8}}>03</Text>
+              <Image style = {styles.imgCasi_Listnhac} 
+                source = {require('../../img/jussta-thumb.jpg')}/>
+                <View>
+                  <Text>Đã Lỡ Yêu Em Nhiều</Text>
+                  <Text>JusstaTee</Text>
+                </View>
+              <Image 
+                style = {styles.img_iconListnhac}
+                source = {require('../../img/music-player.png')}/>
+              <Image 
+                style = {styles.img_dotListnhac}
+                source = {require('../../img/more.png')}/>
+            </View>
+              {/* 4th Music - HuongTram */}
+            <View style = {styles.view_Listnhac}>
+              <Text style = {{marginLeft:8,color:'orange',padding:5, marginRight:8}}>04</Text>
+              <Image style = {styles.imgCasi_Listnhac} 
+                source = {require('../../img/huongtram.jpg')}/>
+                <View>
+                  <Text>Em Gái Mưa</Text>
+                  <Text>Hương Tràm</Text>
+                </View>
+              <Image 
+                style = {styles.img_iconListnhac}
+                source = {require('../../img/music-player.png')}/>
+              <Image 
+                style = {styles.img_dotListnhac}
+                source = {require('../../img/more.png')}/>
+            </View>
+          </View>
+
+          <View style = {styles.Zingchat}>
+            <Text style = {[styles.ngaythangthongke, styles.text_Zingview]}>ZING CHAT TUẦN</Text>
+            <View style = {{flexDirection:'row'}}>
+              <View style = {{backgroundColor:'red', flex:1/2, height:50, justifyContent:'center', alignItems:'center'}}>
+                <Text>Bảng Xếp Hạng</Text>
+                <Text>Việt Nam</Text>
+              </View>
+              <View style = {{backgroundColor:'blue', flex:1/2, height:50, justifyContent:'center', alignItems:'center'}}>
+                <Text>Bảng Xếp Hạng</Text>
+                <Text>Âu Mỹ</Text>
+              </View>
+            </View>
+
+            <View style = {{flexDirection:'row',marginTop:10}}>
+              <View style = {{backgroundColor:'green', flex:1/2, height:50, justifyContent:'center', alignItems:'center'}}>
+                  <Text>Bảng Xếp Hạng</Text>
+                  <Text>Hàn Quốc</Text>
+              </View>
+              <View style = {{backgroundColor:'yellow', flex:1/2, height:50, justifyContent:'center', alignItems:'center'}}>
+                <Text>Bảng Xếp Hạng</Text>
+                <Text>TOP 100</Text>
+              </View>
+            </View>
+          </View>
+
+          
         </Content>
       </Container>
     );
