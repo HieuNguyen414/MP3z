@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Image, View, StyleSheet, TouchableOpacity,StatusBar} from 'react-native';
 import { Container, Header, Content, Tab, Icon,
    Tabs, Left, Right, Body, TabHeading,Text } from 'native-base';
-import Trangchu from './Trangchu';
-import Canhan from './Canhan';
+import Trangchu from './TrangChu/Trangchu';
+import Canhan from './CaNhan/Canhan';
 
 export default class  extends Component{
   render() {
@@ -14,7 +14,7 @@ export default class  extends Component{
           />
           {/* initialPage: đặt tab mặc định hiển thị */}
           <Tabs 
-              initialPage={1} 
+              initialPage={0} 
               tabBarPosition = {'top'} 
               tabBarUnderlineStyle={{ backgroundColor: 'black', height:0.8}}
               > 
@@ -22,7 +22,7 @@ export default class  extends Component{
             <Tab heading={ 
               <TabHeading style = {{backgroundColor:'#fff'}}>
                 <TouchableOpacity>
-                <Image source = {require('../../img/home_menu.png')} />
+                <Image source = {require('../../icon/home_menu.png')} />
                 </TouchableOpacity>
               </TabHeading>}>
             </Tab>
@@ -51,7 +51,7 @@ export default class  extends Component{
             <Tab heading={ 
               <TabHeading style = {{backgroundColor:'#fff'}}>
                 <TouchableOpacity>
-                  <Image source = {require('../../img/home_search.png')}/>
+                  <Image source = {require('../../icon/home_search.png')}/>
                 </TouchableOpacity>
               </TabHeading>}>
             </Tab>
